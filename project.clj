@@ -1,4 +1,4 @@
-(defproject riemann "0.2.13-SNAPSHOT"
+(defproject riemann "0.2.14-SNAPSHOT"
   :description
 "A network event stream processor. Intended for analytics, metrics, and alerting; and to glue various monitoring systems together."
   :url "http://github.com/riemann/riemann"
@@ -37,13 +37,14 @@
     [interval-metrics "1.0.0"]
     [io.netty/netty-all "4.1.4.Final"]
     [clj-antlr "0.2.2"]
-    [riemann-clojure-client "0.4.4"]
+    [riemann-clojure-client "0.4.5"]
     [less-awful-ssl "1.0.0"]
     [slingshot "0.12.2"]
     [clj-campfire "2.2.0"]
     [clj-nsca "0.0.3"]
     [amazonica "0.3.28" :exclusions [joda-time]]
-    [spootnik/kinsky "0.1.16"]]
+    [spootnik/kinsky "0.1.16"]
+    [pjstadig/humane-test-output "0.8.1"]]
   :plugins [[lein-codox "0.10.2"]
             [lein-difftest "2.0.0"]
             [lein-rpm "0.0.5"
@@ -94,6 +95,7 @@
                    :elasticsearch :elasticsearch
                    :netuitive :netuitive
                    :kafka :kafka
+                   :pushover :pushover
                    :all (fn [_] true)}
 ;;  :javac-options     ["-target" "1.6" "-source" "1.6"]
   :java-source-paths ["src/riemann/"]
